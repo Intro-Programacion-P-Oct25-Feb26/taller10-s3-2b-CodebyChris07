@@ -25,6 +25,7 @@ public class Problema04 {
         boolean mayorIgual = true;
         // Asumimos que A no ha ganado estrictamente aún (Condición 2)
         boolean estricto = false;
+        // Matriz A
         System.out.println("---Matriz A---");
         for (int f = 0; f < matA.length; f++) { // filas
             for (int c = 0; c < matA[f].length; c++) { // columnas
@@ -37,8 +38,8 @@ public class Problema04 {
 
         // Matriz B
         System.out.println("---Matriz B---");
-        for (int f = 0; f < matB.length; f++) {
-            for (int c = 0; c < matB[f].length; c++) {
+        for (int f = 0; f < matB.length; f++) { // filas
+            for (int c = 0; c < matB[f].length; c++) { // columnas
                 System.out.printf("Ingrese los valores de B en la posicion [%s] "
                         + "[%s]\n", f, c);
                 matB[f][c] = entrada.nextInt();
@@ -73,7 +74,7 @@ public class Problema04 {
         }
         // Para que sea "mayor", no debe haber perdido nunca (mayorIgual) 
         // Y debe haber ganado al menos una vez (estricto)
-        System.out.println("\n--- Resultado del Análisis ---");
+        System.out.println("\n--- Resultado ---");
         if (mayorIgual == true && estricto == true) {
             System.out.println("La matriz A es mayor que la matriz B");
         } else {
