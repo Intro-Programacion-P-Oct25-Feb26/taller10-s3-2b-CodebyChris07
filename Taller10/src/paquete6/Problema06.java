@@ -28,44 +28,44 @@ public class Problema06 {
         entrada.useLocale(Locale.US);
         double num;
         double[][] matriz1 = new double[5][6]; // matriz original
-        double[][] matrizResul = new double[5][6]; // matriz resultante
+        double[][] matrizResult = new double[5][6]; // matriz original
 
         String reporte = "";
 
         System.out.println("Ingrese un número entero o real: ");
         num = entrada.nextDouble();
 
-        System.out.println("\nIngrese los valores de la matriz (5x6):");
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 6; j++) {
-                System.out.printf("Valor [%d][%d]: ", i, j);
+        System.out.println("\nValores para la matriz(5x6):");
+        for (int i = 0; i < matriz1.length; i++) {
+            for (int j = 0; j < matriz1[i].length; j++) {
+                System.out.printf("Posicion [%d][%d]: ", i, j);
                 matriz1[i][j] = entrada.nextDouble();
             }
         }
 
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 6; j++) {
-                matrizResul[i][j] = matriz1[i][j] * num;
+        for (int i = 0; i < matriz1.length; i++) {
+            for (int j = 0; j < matriz1[i].length; j++) {
+                matrizResult[i][j] = matriz1[i][j] * num;
             }
         }
 
         reporte = String.format("%s\nMatriz Original:\n", reporte);
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 6; j++) {
-                reporte = String.format("%s%.2f ", reporte,
+        for (int i = 0; i < matriz1.length; i++) {
+            for (int j = 0; j < matriz1[i].length; j++) {
+                reporte = String.format("%s%.1f ", reporte,
                         matriz1[i][j]);
             }
             reporte = String.format("%s\n", reporte);
         }
 
         reporte = String.format("%s\nMatriz Resultante (multiplicada "
-                + "por %.2f):\n",
+                + "por %.1f):\n",
                 reporte, num);
 
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 6; j++) {
-                reporte = String.format("%s%.2f ", reporte,
-                        matrizResul[i][j]);
+        for (int i = 0; i < matriz1.length; i++) {
+            for (int j = 0; j < matriz1[i].length; j++) {
+                reporte = String.format("%s%.1f ", reporte,
+                        matrizResult[i][j]);
             }
             reporte = String.format("%s\n", reporte);
         }
