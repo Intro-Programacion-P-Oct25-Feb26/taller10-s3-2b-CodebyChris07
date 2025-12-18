@@ -52,19 +52,19 @@ public class Problema06 {
         reporte = String.format("%s\nMatriz Original:\n", reporte);
         for (int i = 0; i < matriz1.length; i++) {
             for (int j = 0; j < matriz1[i].length; j++) {
-                reporte = String.format("%s%.1f ", reporte,
+                reporte = String.format("%s%.2f ", reporte,
                         matriz1[i][j]);
             }
             reporte = String.format("%s\n", reporte);
         }
 
         reporte = String.format("%s\nMatriz Resultante (multiplicada "
-                + "por %.1f):\n",
+                + "por %.2f):\n",
                 reporte, num);
 
         for (int i = 0; i < matriz1.length; i++) {
             for (int j = 0; j < matriz1[i].length; j++) {
-                reporte = String.format("%s%.1f ", reporte,
+                reporte = String.format("%s%.2f ", reporte,
                         matrizResult[i][j]);
             }
             reporte = String.format("%s\n", reporte);
